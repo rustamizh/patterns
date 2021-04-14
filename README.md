@@ -378,3 +378,128 @@ subject.someBusinessLogic();
 
 subject.detach(observer2);
 ```
+
+
+### Посредник
+
+[ссылка на паттерн](https://refactoring.guru/ru/design-patterns/mediator)
+
+**Назначение**:  определяет объект, инкапсулирующий способ взаимодействия множества объектов.
+
+**Другими словами**: посредник — это клей, связывающий несколько независимых
+классов между собой. Он избавляет классы от необходимости ссылаться друг на
+друга, позволяя тем самым их независимо изменять и анализировать.
+
+Паттерн Посредник заставляет объекты общаться не напрямую друг с другом, а через отдельный объект-посредник, который знает, кому нужно перенаправить тот или иной запрос. Благодаря этому, компоненты системы будут зависеть только от посредника, а не от десятков других компонентов.
+
+Если раньше при получении клика от пользователя объект кнопки сам проверял значения полей, то теперь его единственной обязанностью будет сообщить посреднику о том, что произошёл клик. Получив извещение, посредник выполнит все необходимые проверки полей. Таким образом, вместо нескольких зависимостей от остальных элементов кнопка получит только одну — от самого посредника.
+
+Чтобы сделать код ещё более гибким, можно выделить общий интерфейс для всех посредников. Наша кнопка станет зависимой не от конкретного посредника создания пользователя, а от абстрактного, что позволит использовать её и с другими посредниками.
+
+Таким образом, посредник скрывает в себе все сложные связи и зависимости между классами отдельных компонентов программы. А чем меньше связей имеют классы, тем проще их изменять, расширять и повторно использовать.
+
+Посредник содержит код взаимодействия нескольких компонентов между собой. Зачастую этот объект не только хранит ссылки на все свои компоненты, но и сам их создаёт, управляя дальнейшим жизненным циклом.
+
+Компоненты не должны общаться друг с другом напрямую. Если в компоненте происходит важное событие, он должен оповестить своего посредника, а тот сам решит — касается ли событие других компонентов, и стоит ли их оповещать. При этом компонент-отправитель не знает кто обработает его запрос, а компонент-получатель не знает кто его прислал.
+
+Посредник может сильно раздуться.
+
+```javascript
+/**
+ * Интерфейс Посредника предоставляет метод, используемый компонентами для
+ * уведомления посредника о различных событиях. Посредник может реагировать на
+ * эти события и передавать исполнение другим компонентам.
+ */
+interface Mediator {
+    notify(sender: object, event: string): void;
+}
+
+/**
+ * Конкретные Посредники реализуют совместное поведение, координируя отдельные
+ * компоненты.
+ */
+class ConcreteMediator implements Mediator {
+    private component1: Component1;
+
+    private component2: Component2;
+
+    constructor(c1: Component1, c2: Component2) {
+        this.component1 = c1;
+        this.component1.setMediator(this);
+        this.component2 = c2;
+        this.component2.setMediator(this);
+    }
+
+    public notify(sender: object, event: string): void {
+        if (event === 'A') {
+            console.log('Mediator reacts on A and triggers following operations:');
+            this.component2.doC();
+        }
+
+        if (event === 'D') {
+            console.log('Mediator reacts on D and triggers following operations:');
+            this.component1.doB();
+            this.component2.doC();
+        }
+    }
+}
+
+/**
+ * Базовый Компонент обеспечивает базовую функциональность хранения экземпляра
+ * посредника внутри объектов компонентов.
+ */
+class BaseComponent {
+    protected mediator: Mediator;
+
+    constructor(mediator: Mediator = null) {
+        this.mediator = mediator;
+    }
+
+    public setMediator(mediator: Mediator): void {
+        this.mediator = mediator;
+    }
+}
+
+/**
+ * Конкретные Компоненты реализуют различную функциональность. Они не зависят от
+ * других компонентов. Они также не зависят от каких-либо конкретных классов
+ * посредников.
+ */
+class Component1 extends BaseComponent {
+    public doA(): void {
+        console.log('Component 1 does A.');
+        this.mediator.notify(this, 'A');
+    }
+
+    public doB(): void {
+        console.log('Component 1 does B.');
+        this.mediator.notify(this, 'B');
+    }
+}
+
+class Component2 extends BaseComponent {
+    public doC(): void {
+        console.log('Component 2 does C.');
+        this.mediator.notify(this, 'C');
+    }
+
+    public doD(): void {
+        console.log('Component 2 does D.');
+        this.mediator.notify(this, 'D');
+    }
+}
+
+/**
+ * Клиентский код.
+ */
+const c1 = new Component1();
+const c2 = new Component2();
+const mediator = new ConcreteMediator(c1, c2);
+
+console.log('Client triggers operation A.');
+c1.doA();
+
+console.log('');
+console.log('Client triggers operation D.');
+c2.doD();
+```
