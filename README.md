@@ -18,7 +18,7 @@
 
 - [Посетитель](#visitor)
 
-### <a name="strategy"></a> Стратегия
+#### <a name="strategy"></a> Стратегия
 
 <details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/strategy)
@@ -119,7 +119,7 @@ context.doSomeBusinessLogic();
 
 </details>
 
-### Шаблонный метод
+#### <a name="template-method"></a> Шаблонный метод
 
 <details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/template-method)
@@ -256,7 +256,7 @@ clientCode(new ConcreteClass2());
 
 </details>
 
-### Наблюдатель
+#### <a name="observer"></a> Наблюдатель
 
 <details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/observer)
@@ -405,7 +405,7 @@ subject.detach(observer2);
 
 </details>
 
-### Посредник
+#### <a name="mediator"></a> Посредник
 
 <details>
 
