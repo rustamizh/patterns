@@ -3,21 +3,21 @@
 ## [Порождающие](#creational)
 
 <details>
-<summary>Оглавление Порождающих паттернов</summary>
+<summary>Оглавление паттернов</summary>
 
 </details>
 
 ## [Структурные](#structural)
 
 <details>
-<summary>Оглавление структурных паттернов</summary>
+<summary>Оглавление паттернов</summary>
 
 </details>
 
 ## [Поведенческие](#behavioral)
 
 <details>
-<summary>Оглавление поведенческих паттернов</summary>
+<summary>Оглавление паттернов</summary>
 
 - [Стратегия](#strategy)
 
