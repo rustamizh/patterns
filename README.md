@@ -2,12 +2,22 @@
 
 ## [Порождающие](#creational)
 
+<details>
+<summary>Оглавление Порождающих паттернов</summary>
+
+</details>
+
 ## [Структурные](#structural)
+
+<details>
+<summary>Оглавление структурных паттернов</summary>
+
+</details>
 
 ## [Поведенческие](#behavioral)
 
 <details>
-<summary>Список</summary>
+<summary>Оглавление поведенческих паттернов</summary>
 
 - [Стратегия](#strategy)
 
@@ -154,6 +164,9 @@ context.doSomeBusinessLogic();
 
 **Конкретный класс** переопределяет некоторые (или все) шаги алгоритма. Конкретные классы не переопределяют сам шаблонный метод.
 
+<details>
+<summary>Пример паттерна на TypeScript</summary>
+
 ```javascript
 /**
  * Абстрактный Класс определяет шаблонный метод, содержащий скелет некоторого
@@ -261,6 +274,8 @@ console.log('Same client code can work with different subclasses:');
 clientCode(new ConcreteClass2());
 ```
 
+</details>
+
 ### <a name="observer"></a> Наблюдатель
 
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/observer)
@@ -278,6 +293,9 @@ clientCode(new ConcreteClass2());
 Издателю безразлично, какой класс будет иметь тот или иной подписчик, так как все они должны следовать общему интерфейсу и иметь единый метод оповещения.
 
 Увидев, как складно всё работает, вы можете выделить общий интерфейс, описывающий методы подписки и отписки, и для всех издателей. После этого подписчики смогут работать с разными типами издателей, а также получать оповещения от них через один и тот же метод.
+
+<details>
+<summary>Пример паттерна на TypeScript</summary>
 
 ```javascript
 /**
@@ -407,6 +425,8 @@ subject.someBusinessLogic();
 subject.detach(observer2);
 ```
 
+</details>
+
 ### <a name="mediator"></a> Посредник
 
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/mediator)
@@ -430,6 +450,9 @@ subject.detach(observer2);
 Компоненты не должны общаться друг с другом напрямую. Если в компоненте происходит важное событие, он должен оповестить своего посредника, а тот сам решит — касается ли событие других компонентов, и стоит ли их оповещать. При этом компонент-отправитель не знает кто обработает его запрос, а компонент-получатель не знает кто его прислал.
 
 Посредник может сильно раздуться.
+
+<details>
+<summary>Пример паттерна на TypeScript</summary>
 
 ```javascript
 /**
@@ -530,3 +553,5 @@ console.log('');
 console.log('Client triggers operation D.');
 c2.doD();
 ```
+
+</details>
