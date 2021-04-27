@@ -8,17 +8,17 @@
 
 <details>
 
-#### [Стратегия](#strategy)
+- [Стратегия](#strategy)
 
-#### [Шаблонный метод](#template-method)
+- [Шаблонный метод](#template-method)
 
-#### [Наблюдатель](#observer)
+- [Наблюдатель](#observer)
 
-#### [Посредник](#mediator)
+- [Посредник](#mediator)
 
-#### [Итератор](#iterator)
+- [Итератор](#iterator)
 
-#### [Посетитель](#visitor)
+- [Посетитель](#visitor)
 
 </details>
 
