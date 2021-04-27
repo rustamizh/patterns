@@ -22,7 +22,6 @@
 
 ### <a name="strategy"></a> Стратегия
 
-<details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/strategy)
 
 **Назначение**: определяет семейство алгоритмов, инкапсулирует каждый из них и делает их взаимозаменяемыми. Стратегия позволяет изменять алгоритмы независимо от клиентов, которые ими пользуются.
@@ -119,11 +118,8 @@ context.setStrategy(new ConcreteStrategyB());
 context.doSomeBusinessLogic();
 ```
 
-</details>
-
 ### <a name="template-method"></a> Шаблонный метод
 
-<details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/template-method)
 
 **Назначение**: шаблонный метод определяет основу алгоритма и позволяет подклассам переопределять некоторые шаги алгоритма, не изменяя его структуры в целом.
@@ -256,11 +252,8 @@ console.log('Same client code can work with different subclasses:');
 clientCode(new ConcreteClass2());
 ```
 
-</details>
-
 ### <a name="observer"></a> Наблюдатель
 
-<details>
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/observer)
 
 **Назначение**: определяет зависимость типа «один ко многим» между объектами
@@ -405,11 +398,7 @@ subject.someBusinessLogic();
 subject.detach(observer2);
 ```
 
-</details>
-
 ### <a name="mediator"></a> Посредник
-
-<details>
 
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/mediator)
 
@@ -532,5 +521,3 @@ console.log('');
 console.log('Client triggers operation D.');
 c2.doD();
 ```
-
-</details>
