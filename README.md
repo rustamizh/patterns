@@ -1,22 +1,26 @@
-# Паттерны проектирования (с примерами на TypeScript)
+## Паттерны проектирования (с примерами на TypeScript)
 
-## [Порождающие](#creational)
+### [Порождающие](#creational)
 
-## [Структурные](#structural)
+### [Структурные](#structural)
 
-## [Поведенческие](#behavioral)
+### [Поведенческие](#behavioral)
 
-### [Стратегия](#strategy)
+<details>
 
-### [Шаблонный метод](#template-method)
+#### [Стратегия](#strategy)
 
-### [Наблюдатель](#observer)
+#### [Шаблонный метод](#template-method)
 
-### [Посредник](#mediator)
+#### [Наблюдатель](#observer)
 
-### [Итератор](#iterator)
+#### [Посредник](#mediator)
 
-### [Посетитель](#visitor)
+#### [Итератор](#iterator)
+
+#### [Посетитель](#visitor)
+
+</details>
 
 ### <a name="strategy"></a> Стратегия
 
