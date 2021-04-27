@@ -6,8 +6,6 @@
 
 ### [Поведенческие](#behavioral)
 
-<details>
-
 - [Стратегия](#strategy)
 
 - [Шаблонный метод](#template-method)
@@ -19,8 +17,6 @@
 - [Итератор](#iterator)
 
 - [Посетитель](#visitor)
-
-</details>
 
 ### <a name="strategy"></a> Стратегия
 
