@@ -5,6 +5,15 @@
 <details>
 <summary>Оглавление паттернов</summary>
 
+- [Фабричный метод](#factory-method)
+
+- [Абстрактная фабрика](#abstract-factory)
+
+- [Строитель](#builder)
+
+- [Прототип](#prototype)
+
+- [Одиночка](#singleton)
 </details>
 
 ## [Структурные](#structural)
@@ -12,6 +21,19 @@
 <details>
 <summary>Оглавление паттернов</summary>
 
+- [Адаптер](#adapter)
+
+- [Мост](#bridge)
+
+- [Компоновщик](#composite)
+
+- [Декоратор](#decorator)
+
+- [Фасад](#faсade)
+
+- [Легковес](#flyweight)
+
+- [Заместитель](#proxy)
 </details>
 
 ## [Поведенческие](#behavioral)
@@ -30,6 +52,14 @@
 - [Итератор](#iterator)
 
 - [Посетитель](#visitor)
+
+- [Цепочка обязанностей](#chain-of-responsibility)
+
+- [Команда](#command)
+
+- [Снимок](#memento)
+
+- [Состояние](#state)
 </details>
 
 ## <a name="behavioral"></a> Поведенческие
