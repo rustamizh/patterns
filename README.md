@@ -2332,7 +2332,7 @@ clientCode(decorator2);
 </details>
 
 
-### <a name="facade"></a> Декоратор
+### <a name="facade"></a> Фасад
 
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/facade)
 
