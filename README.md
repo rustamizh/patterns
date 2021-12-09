@@ -3159,7 +3159,7 @@ clientCode(new ConcreteFactory2());
 
 </details>
 
-### <a name="builder"></a> Абстрактная фабрика
+### <a name="builder"></a> Строитель
 
 [ссылка на паттерн](https://refactoring.guru/ru/design-patterns/builder)
 
